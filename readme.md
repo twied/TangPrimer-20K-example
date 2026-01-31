@@ -36,3 +36,38 @@ I found that the software shipped in Linux distros (e.g. Debian as of January
 2026) is outdated and does not work. It is necessary to build some tools
 directly from source. To ease that process, check out the
 [Docker container](docker).
+
+# Components on the ext board
+
+* Make sure that switch 1 on the ext board is in the `on` (down) position.
+  If it is not, flashing will hang indefinitely.
+
+* The `run.sh` scripts in the individual directories use some environment
+  variables to find the required tools. They default to the usual program
+  names, so that a bare metal installation should "just work":
+
+    * `tang20k_yosys` (default: `yosys`),
+
+    * `tang20k_pnr` (default: `nextpnr-himbaechel`),
+
+    * `tang20k_pack` (default: `gowin_pack`), and
+
+    * `tang20k_loader` (default: `openFPGALoader`).
+
+If you created a docker image as described above and installed a "tang20k"
+wrapper script, set the variables like so:
+
+```sh
+export tang20k_yosys="tang20k yosys"
+export tang20k_pnr="tang20k nextpnr-himbaechel"
+export tang20k_pack="tang20k gowin_pack"
+```
+
+To make these changes persistent, you may want to put these lines in your
+`${HOME}/.bashrc` file.
+
+## LEDs
+
+The ext board comes with six orange LEDS located at the right side of the
+board. They are labeled "5" to "0" from top to bottom. The
+[example](ext_board/leds) displays a simple static pattern.

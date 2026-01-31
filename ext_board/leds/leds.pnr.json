@@ -1,0 +1,304 @@
+{
+  "creator": "Next Generation Place and Route (Version nextpnr-0.9-59-g8c627817)",
+  "modules": {
+    "top": {
+      "settings": {
+        "route": "00000000000000000000000000000001",
+        "router/tmg_ripup": "0 ",
+        "router1/useEstimate": "1 ",
+        "router1/fullCleanupReroute": "1 ",
+        "router1/cleanupReroute": "1 ",
+        "router1/maxIterCnt": "200",
+        "place": "00000000000000000000000000000001",
+        "placer1/startTemp": "1.000000",
+        "placer1/minBelsForGridPick": "64",
+        "placer1/netShareWeight": "0.000000",
+        "placer1/constraintWeight": "10.000000",
+        "placerHeap/cellPlacementTimeout": "8",
+        "placerHeap/netShareWeight": "0.000000",
+        "placerHeap/parallelRefine": "0 ",
+        "pack": "00000000000000000000000000000001",
+        "synth": "00000000000000000000000000000001",
+        "placerHeap/timingWeight": "10 ",
+        "placerHeap/criticalityExponent": "2",
+        "placerHeap/beta": "0.900000",
+        "placerHeap/alpha": "0.100000",
+        "seed": "0011000101000001010110010010011001010011010110001001011110010011",
+        "arch.type": " ",
+        "arch.name": "ARCHNAME",
+        "router": "router1",
+        "placer": "heap",
+        "auto_freq": "00000000000000000000000000000000",
+        "slack_redist_iter": "00000000000000000000000000000000",
+        "timing_driven": "00000000000000000000000000000001",
+        "target_freq": "12000000.000000",
+        "cst.filename": "constraints.cst",
+        "packer.partno": "GW2A-LV18PG256C8/I7",
+        "packer.chipdb": "GW2A-18",
+        "packer.arch": "himbaechel/gowin"
+      },
+      "attributes": {
+        "top": "00000000000000000000000000000001",
+        "src": "leds.v:1.1-14.10"
+      },
+      "ports": {
+        "nLed": {
+          "direction": "output",
+          "bits": [ 9290, 9288, 9286, 9284, 9282, 9278 ]
+        }
+      },
+      "cells": {
+        "GSR": {
+          "hide_name": 0,
+          "type": "GSR",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X50Y27/GSR"
+          },
+          "port_directions": {
+            "GSRI": "input"
+          },
+          "connections": {
+            "GSRI": [ 9301 ]
+          }
+        },
+        "$PACKER_VCC_DRV": {
+          "hide_name": 1,
+          "type": "GOWIN_VCC",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X0Y0/VCC"
+          },
+          "port_directions": {
+            "V": "output"
+          },
+          "connections": {
+            "V": [ 9301 ]
+          }
+        },
+        "$PACKER_GND_DRV": {
+          "hide_name": 1,
+          "type": "GOWIN_GND",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X0Y0/GND"
+          },
+          "port_directions": {
+            "G": "output"
+          },
+          "connections": {
+            "G": [ 9302 ]
+          }
+        },
+        "nLed_OBUF_O_5": {
+          "hide_name": 0,
+          "type": "OBUF",
+          "parameters": {
+            "NET_I": "VCC",
+            "NET_O": "NET"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X55Y31/IOBB",
+            "src": "leds.v:2.23-2.27",
+            "&IO_TYPE=LVCMOS33": "00000000000000000000000000000001",
+            "keep": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "O": "output",
+            "I": "input"
+          },
+          "connections": {
+            "O": [ 9290 ],
+            "I": [ 9301 ]
+          }
+        },
+        "nLed_OBUF_O_4": {
+          "hide_name": 0,
+          "type": "OBUF",
+          "parameters": {
+            "NET_I": "VCC",
+            "NET_O": "NET"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X55Y31/IOBA",
+            "src": "leds.v:2.23-2.27",
+            "&IO_TYPE=LVCMOS33": "00000000000000000000000000000001",
+            "keep": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "O": "output",
+            "I": "input"
+          },
+          "connections": {
+            "O": [ 9288 ],
+            "I": [ 9301 ]
+          }
+        },
+        "nLed_OBUF_O_3": {
+          "hide_name": 0,
+          "type": "OBUF",
+          "parameters": {
+            "NET_I": "GND",
+            "NET_O": "NET"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X51Y0/IOBA",
+            "src": "leds.v:2.23-2.27",
+            "&IO_TYPE=LVCMOS33": "00000000000000000000000000000001",
+            "keep": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "O": "output",
+            "I": "input"
+          },
+          "connections": {
+            "O": [ 9286 ],
+            "I": [ 9302 ]
+          }
+        },
+        "nLed_OBUF_O_2": {
+          "hide_name": 0,
+          "type": "OBUF",
+          "parameters": {
+            "NET_I": "GND",
+            "NET_O": "NET"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X51Y0/IOBB",
+            "src": "leds.v:2.23-2.27",
+            "&IO_TYPE=LVCMOS33": "00000000000000000000000000000001",
+            "keep": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "O": "output",
+            "I": "input"
+          },
+          "connections": {
+            "O": [ 9284 ],
+            "I": [ 9302 ]
+          }
+        },
+        "nLed_OBUF_O_1": {
+          "hide_name": 0,
+          "type": "OBUF",
+          "parameters": {
+            "NET_I": "VCC",
+            "NET_O": "NET"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X33Y0/IOBB",
+            "src": "leds.v:2.23-2.27",
+            "&IO_TYPE=LVCMOS33": "00000000000000000000000000000001",
+            "keep": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "O": "output",
+            "I": "input"
+          },
+          "connections": {
+            "O": [ 9282 ],
+            "I": [ 9301 ]
+          }
+        },
+        "nLed_OBUF_O": {
+          "hide_name": 0,
+          "type": "OBUF",
+          "parameters": {
+            "NET_I": "GND",
+            "NET_O": "NET"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X33Y0/IOBA",
+            "src": "leds.v:2.23-2.27",
+            "&IO_TYPE=LVCMOS33": "00000000000000000000000000000001",
+            "keep": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "O": "output",
+            "I": "input"
+          },
+          "connections": {
+            "O": [ 9278 ],
+            "I": [ 9302 ]
+          }
+        }
+      },
+      "netnames": {
+        "nLed[0]": {
+          "hide_name": 0,
+          "bits": [ 9290 ] ,
+          "attributes": {
+            "ROUTING": " ",
+            "src": "leds.v:2.23-2.27"
+          }
+        },
+        "nLed[1]": {
+          "hide_name": 0,
+          "bits": [ 9288 ] ,
+          "attributes": {
+            "ROUTING": " ",
+            "src": "leds.v:2.23-2.27"
+          }
+        },
+        "nLed[2]": {
+          "hide_name": 0,
+          "bits": [ 9286 ] ,
+          "attributes": {
+            "ROUTING": " ",
+            "src": "leds.v:2.23-2.27"
+          }
+        },
+        "nLed[3]": {
+          "hide_name": 0,
+          "bits": [ 9284 ] ,
+          "attributes": {
+            "ROUTING": " ",
+            "src": "leds.v:2.23-2.27"
+          }
+        },
+        "nLed[4]": {
+          "hide_name": 0,
+          "bits": [ 9282 ] ,
+          "attributes": {
+            "ROUTING": " ",
+            "src": "leds.v:2.23-2.27"
+          }
+        },
+        "$PACKER_GND": {
+          "hide_name": 1,
+          "bits": [ 9302 ] ,
+          "attributes": {
+            "ROUTING": "X51Y0/S260;X51Y0/S260/VSS;1;X51Y0/D1;X51Y0/D1/S260;1;X51Y0/N250;X51Y0/N250/VSS;1;X51Y0/A0;X51Y0/A0/S251;1;X0Y0/VSS;;1;X33Y0/N250;X33Y0/N250/VSS;1;X33Y0/A0;X33Y0/A0/S251;1"
+          }
+        },
+        "nLed[5]": {
+          "hide_name": 0,
+          "bits": [ 9278 ] ,
+          "attributes": {
+            "ROUTING": " ",
+            "src": "leds.v:2.23-2.27"
+          }
+        },
+        "$PACKER_VCC": {
+          "hide_name": 1,
+          "bits": [ 9301 ] ,
+          "attributes": {
+            "ROUTING": "X33Y0/N200;X33Y0/N200/VCC;1;X33Y0/D1;X33Y0/D1/S201;1;X55Y31/A0;X55Y31/A0/W271;1;X50Y27/E230;X50Y27/E230/VCC;1;X50Y27/C4;X50Y27/C4/E230;1;X0Y0/VCC;;1;X55Y31/E270;X55Y31/E270/VCC;1;X55Y31/D1;X55Y31/D1/E270;1"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+// SPDX-FileCopyrightText: 2026 Tim Wiederhake
+//
+// SPDX-License-Identifier: WTFPL
+
+IO_LOC "nLed[0]" C13;
+IO_PORT "nLed[0]" IO_TYPE=LVCMOS33;
+
+IO_LOC "nLed[1]" A13;
+IO_PORT "nLed[1]" IO_TYPE=LVCMOS33;
+
+IO_LOC "nLed[2]" N16;
+IO_PORT "nLed[2]" IO_TYPE=LVCMOS33;
+
+IO_LOC "nLed[3]" N14;
+IO_PORT "nLed[3]" IO_TYPE=LVCMOS33;
+
+IO_LOC "nLed[4]" L14;
+IO_PORT "nLed[4]" IO_TYPE=LVCMOS33;
+
+IO_LOC "nLed[5]" L16;
+IO_PORT "nLed[5]" IO_TYPE=LVCMOS33;

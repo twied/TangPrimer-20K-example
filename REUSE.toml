@@ -1,0 +1,10 @@
+version = 1
+
+[[annotations]]
+path = [
+    "ext_board/*/*.fs",
+    "ext_board/*/*.json",
+    "ext_board/*/pinout.cst"
+]
+SPDX-FileCopyrightText = "NONE"
+SPDX-License-Identifier = "CC0-1.0"
