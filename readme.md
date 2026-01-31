@@ -29,3 +29,10 @@ I am still learning and I make mistakes. If you find anything wrong with the
 code in this repository or have suggestions for improvement, please do not
 hesitate to
 [open a ticket](https://github.com/twied/TangPrimer-20K-example/issues).
+
+# Setup
+
+I found that the software shipped in Linux distros (e.g. Debian as of January
+2026) is outdated and does not work. It is necessary to build some tools
+directly from source. To ease that process, check out the
+[Docker container](docker).

@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# SPDX-FileCopyrightText: 2026 Tim Wiederhake
+#
+# SPDX-License-Identifier: WTFPL
+
+docker run \
+    --interactive \
+    --tty \
+    --rm \
+    --volume ".":"/work":rw \
+    tang20k "${@}"
