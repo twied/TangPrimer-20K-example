@@ -76,3 +76,9 @@ board. They are labeled "5" to "0" from top to bottom. The
 
 A simple [example](ext_board/clock) that flashes the LEDs once per second, in
 an alternating pattern.
+
+## Switches
+
+This [example](ext_board/switches) demonstrates how to read the status of the
+5 switches located at the right side of the board. The LEDs display the result
+of some boolean functions.

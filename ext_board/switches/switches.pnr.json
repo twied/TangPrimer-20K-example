@@ -1,0 +1,695 @@
+{
+  "creator": "Next Generation Place and Route (Version nextpnr-0.9-59-g8c627817)",
+  "modules": {
+    "top": {
+      "settings": {
+        "route": "00000000000000000000000000000001",
+        "router/tmg_ripup": "0 ",
+        "router1/useEstimate": "1 ",
+        "router1/fullCleanupReroute": "1 ",
+        "router1/cleanupReroute": "1 ",
+        "router1/maxIterCnt": "200",
+        "place": "00000000000000000000000000000001",
+        "placer1/startTemp": "1.000000",
+        "placer1/minBelsForGridPick": "64",
+        "placer1/netShareWeight": "0.000000",
+        "placer1/constraintWeight": "10.000000",
+        "placerHeap/cellPlacementTimeout": "8",
+        "placerHeap/netShareWeight": "0.000000",
+        "placerHeap/parallelRefine": "0 ",
+        "pack": "00000000000000000000000000000001",
+        "synth": "00000000000000000000000000000001",
+        "placerHeap/timingWeight": "10 ",
+        "placerHeap/criticalityExponent": "2",
+        "placerHeap/beta": "0.900000",
+        "placerHeap/alpha": "0.100000",
+        "seed": "0011000101000001010110010010011001010011010110001001011110010011",
+        "arch.type": " ",
+        "arch.name": "ARCHNAME",
+        "router": "router1",
+        "placer": "heap",
+        "auto_freq": "00000000000000000000000000000000",
+        "slack_redist_iter": "00000000000000000000000000000000",
+        "timing_driven": "00000000000000000000000000000001",
+        "target_freq": "12000000.000000",
+        "cst.filename": "constraints.cst",
+        "packer.partno": "GW2A-LV18PG256C8/I7",
+        "packer.chipdb": "GW2A-18",
+        "packer.arch": "himbaechel/gowin"
+      },
+      "attributes": {
+        "top": "00000000000000000000000000000001",
+        "src": "switches.v:5.1-33.10"
+      },
+      "ports": {
+        "nSwitch": {
+          "direction": "input",
+          "offset": 1,
+          "bits": [ 9320, 9311, 9305, 9301, 9297 ]
+        },
+        "nLed": {
+          "direction": "output",
+          "bits": [ 9295, 9292, 9289, 9286, 9283, 9279 ]
+        }
+      },
+      "cells": {
+        "GSR": {
+          "hide_name": 0,
+          "type": "GSR",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X50Y27/GSR"
+          },
+          "port_directions": {
+            "GSRI": "input"
+          },
+          "connections": {
+            "GSRI": [ 9340 ]
+          }
+        },
+        "$PACKER_VCC_DRV": {
+          "hide_name": 1,
+          "type": "GOWIN_VCC",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X0Y0/VCC"
+          },
+          "port_directions": {
+            "V": "output"
+          },
+          "connections": {
+            "V": [ 9340 ]
+          }
+        },
+        "$PACKER_GND_DRV": {
+          "hide_name": 1,
+          "type": "GOWIN_GND",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000010",
+            "NEXTPNR_BEL": "X0Y0/GND"
+          },
+          "port_directions": {
+            "G": "output"
+          },
+          "connections": {
+            "G": [ 9341 ]
+          }
+        },
+        "nSwitch_IBUF_I_4": {
+          "hide_name": 0,
+          "type": "IBUF",
+          "parameters": {
+            "NET_I": "NET",
+            "NET_O": "NET"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X55Y30/IOBB",
+            "src": "switches.v:7.22-7.29",
+            "&IO_TYPE=LVCMOS33": "00000000000000000000000000000001",
+            "&PULL_MODE=NONE": "00000000000000000000000000000001",
+            "keep": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "O": "output",
+            "I": "input"
+          },
+          "connections": {
+            "O": [ 9321 ],
+            "I": [ 9320 ]
+          }
+        },
+        "nSwitch_IBUF_I_3_O_LUT1_I0_F_LUT2_F_3": {
+          "hide_name": 0,
+          "type": "LUT2",
+          "parameters": {
+            "INIT": "1001"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X51Y1/LUT5",
+            "src": "/usr/local/bin/../share/yosys/gowin/cells_map.v:139.23-140.26",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I1": "input",
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I1": [ 9303 ],
+            "I0": [ 9299 ],
+            "F": [ 9285 ]
+          }
+        },
+        "nSwitch_IBUF_I_3_O_LUT1_I0_F_LUT2_F_2": {
+          "hide_name": 0,
+          "type": "LUT2",
+          "parameters": {
+            "INIT": "0111"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X35Y1/LUT3",
+            "src": "/usr/local/bin/../share/yosys/gowin/cells_map.v:139.23-140.26",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I1": "input",
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I1": [ 9303 ],
+            "I0": [ 9299 ],
+            "F": [ 9278 ]
+          }
+        },
+        "nSwitch_IBUF_I_3_O_LUT1_I0_F_LUT2_F_1": {
+          "hide_name": 0,
+          "type": "LUT2",
+          "parameters": {
+            "INIT": "1011"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X51Y1/LUT6",
+            "src": "/usr/local/bin/../share/yosys/gowin/cells_map.v:139.23-140.26",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I1": "input",
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I1": [ 9303 ],
+            "I0": [ 9299 ],
+            "F": [ 9288 ]
+          }
+        },
+        "nSwitch_IBUF_I_3_O_LUT1_I0_F_LUT2_F": {
+          "hide_name": 0,
+          "type": "LUT2",
+          "parameters": {
+            "INIT": "0001"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X35Y1/LUT7",
+            "src": "/usr/local/bin/../share/yosys/gowin/cells_map.v:139.23-140.26",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I1": "input",
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I1": [ 9303 ],
+            "I0": [ 9299 ],
+            "F": [ 9282 ]
+          }
+        },
+        "nSwitch_IBUF_I_3_O_LUT1_I0": {
+          "hide_name": 0,
+          "type": "LUT1",
+          "parameters": {
+            "INIT": "01"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X7Y37/LUT3",
+            "src": "/usr/local/bin/../share/yosys/gowin/cells_map.v:135.23-136.15",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I0": [ 9313 ],
+            "F": [ 9294 ]
+          }
+        },
+        "nSwitch_IBUF_I_3": {
+          "hide_name": 0,
+          "type": "IBUF",
+          "parameters": {
+            "NET_I": "NET",
+            "NET_O": "NET"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X0Y37/IOBB",
+            "src": "switches.v:7.22-7.29",
+            "&IO_TYPE=LVCMOS33": "00000000000000000000000000000001",
+            "&PULL_MODE=NONE": "00000000000000000000000000000001",
+            "keep": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "O": "output",
+            "I": "input"
+          },
+          "connections": {
+            "O": [ 9313 ],
+            "I": [ 9311 ]
+          }
+        },
+        "nSwitch_IBUF_I_2_O_LUT1_I0": {
+          "hide_name": 0,
+          "type": "LUT1",
+          "parameters": {
+            "INIT": "01"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X27Y35/LUT3",
+            "src": "/usr/local/bin/../share/yosys/gowin/cells_map.v:135.23-136.15",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I0": [ 9307 ],
+            "F": [ 9291 ]
+          }
+        },
+        "nSwitch_IBUF_I_2": {
+          "hide_name": 0,
+          "type": "IBUF",
+          "parameters": {
+            "NET_I": "NET",
+            "NET_O": "NET"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X0Y44/IOBB",
+            "src": "switches.v:7.22-7.29",
+            "&IO_TYPE=LVCMOS33": "00000000000000000000000000000001",
+            "&PULL_MODE=NONE": "00000000000000000000000000000001",
+            "keep": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "O": "output",
+            "I": "input"
+          },
+          "connections": {
+            "O": [ 9307 ],
+            "I": [ 9305 ]
+          }
+        },
+        "nSwitch_IBUF_I_1": {
+          "hide_name": 0,
+          "type": "IBUF",
+          "parameters": {
+            "NET_I": "NET",
+            "NET_O": "NET"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X44Y54/IOBB",
+            "src": "switches.v:7.22-7.29",
+            "&IO_TYPE=LVCMOS33": "00000000000000000000000000000001",
+            "&PULL_MODE=NONE": "00000000000000000000000000000001",
+            "keep": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "O": "output",
+            "I": "input"
+          },
+          "connections": {
+            "O": [ 9303 ],
+            "I": [ 9301 ]
+          }
+        },
+        "nSwitch_IBUF_I": {
+          "hide_name": 0,
+          "type": "IBUF",
+          "parameters": {
+            "NET_I": "NET",
+            "NET_O": "NET"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X53Y54/IOBB",
+            "src": "switches.v:7.22-7.29",
+            "&IO_TYPE=LVCMOS33": "00000000000000000000000000000001",
+            "&PULL_MODE=NONE": "00000000000000000000000000000001",
+            "keep": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "O": "output",
+            "I": "input"
+          },
+          "connections": {
+            "O": [ 9299 ],
+            "I": [ 9297 ]
+          }
+        },
+        "nLed_OBUF_O_5": {
+          "hide_name": 0,
+          "type": "OBUF",
+          "parameters": {
+            "NET_I": "NET",
+            "NET_O": "NET"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X55Y31/IOBB",
+            "src": "switches.v:6.23-6.27",
+            "&IO_TYPE=LVCMOS33": "00000000000000000000000000000001",
+            "keep": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "O": "output",
+            "I": "input"
+          },
+          "connections": {
+            "O": [ 9295 ],
+            "I": [ 9294 ]
+          }
+        },
+        "nLed_OBUF_O_4": {
+          "hide_name": 0,
+          "type": "OBUF",
+          "parameters": {
+            "NET_I": "NET",
+            "NET_O": "NET"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X55Y31/IOBA",
+            "src": "switches.v:6.23-6.27",
+            "&IO_TYPE=LVCMOS33": "00000000000000000000000000000001",
+            "keep": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "O": "output",
+            "I": "input"
+          },
+          "connections": {
+            "O": [ 9292 ],
+            "I": [ 9291 ]
+          }
+        },
+        "nLed_OBUF_O_3": {
+          "hide_name": 0,
+          "type": "OBUF",
+          "parameters": {
+            "NET_I": "NET",
+            "NET_O": "NET"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X51Y0/IOBA",
+            "src": "switches.v:6.23-6.27",
+            "&IO_TYPE=LVCMOS33": "00000000000000000000000000000001",
+            "keep": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "O": "output",
+            "I": "input"
+          },
+          "connections": {
+            "O": [ 9289 ],
+            "I": [ 9288 ]
+          }
+        },
+        "nLed_OBUF_O_2": {
+          "hide_name": 0,
+          "type": "OBUF",
+          "parameters": {
+            "NET_I": "NET",
+            "NET_O": "NET"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X51Y0/IOBB",
+            "src": "switches.v:6.23-6.27",
+            "&IO_TYPE=LVCMOS33": "00000000000000000000000000000001",
+            "keep": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "O": "output",
+            "I": "input"
+          },
+          "connections": {
+            "O": [ 9286 ],
+            "I": [ 9285 ]
+          }
+        },
+        "nLed_OBUF_O_1": {
+          "hide_name": 0,
+          "type": "OBUF",
+          "parameters": {
+            "NET_I": "NET",
+            "NET_O": "NET"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X33Y0/IOBB",
+            "src": "switches.v:6.23-6.27",
+            "&IO_TYPE=LVCMOS33": "00000000000000000000000000000001",
+            "keep": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "O": "output",
+            "I": "input"
+          },
+          "connections": {
+            "O": [ 9283 ],
+            "I": [ 9282 ]
+          }
+        },
+        "nLed_OBUF_O": {
+          "hide_name": 0,
+          "type": "OBUF",
+          "parameters": {
+            "NET_I": "NET",
+            "NET_O": "NET"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X33Y0/IOBA",
+            "src": "switches.v:6.23-6.27",
+            "&IO_TYPE=LVCMOS33": "00000000000000000000000000000001",
+            "keep": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "O": "output",
+            "I": "input"
+          },
+          "connections": {
+            "O": [ 9279 ],
+            "I": [ 9278 ]
+          }
+        }
+      },
+      "netnames": {
+        "$PACKER_GND": {
+          "hide_name": 1,
+          "bits": [ 9341 ] ,
+          "attributes": {
+            "ROUTING": " "
+          }
+        },
+        "$PACKER_VCC": {
+          "hide_name": 1,
+          "bits": [ 9340 ] ,
+          "attributes": {
+            "ROUTING": "X0Y0/VCC;;1;X50Y27/S220;X50Y27/S220/VCC;1;X50Y27/C4;X50Y27/C4/S220;1"
+          }
+        },
+        "nSwitch_IBUF_I_4_O[1]": {
+          "hide_name": 0,
+          "bits": [ 9321 ] ,
+          "attributes": {
+            "ROUTING": " ",
+            "unused_bits": "0 "
+          }
+        },
+        "nSwitch[1]": {
+          "hide_name": 0,
+          "bits": [ 9320 ] ,
+          "attributes": {
+            "ROUTING": " ",
+            "src": "switches.v:7.22-7.29"
+          }
+        },
+        "nSwitch_IBUF_I_3_O": {
+          "hide_name": 0,
+          "bits": [ 9313 ] ,
+          "attributes": {
+            "ROUTING": "X0Y37/Q6;;1;X0Y37/E830;X0Y37/E830/Q6;1;X8Y37/W250;X8Y37/W250/E838;1;X7Y37/A3;X7Y37/A3/W251;1",
+            "unused_bits": "0 ",
+            "src": "/usr/local/bin/../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "single_bit_vector": "00000000000000000000000000000001",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "nSwitch[2]": {
+          "hide_name": 0,
+          "bits": [ 9311 ] ,
+          "attributes": {
+            "ROUTING": " ",
+            "src": "switches.v:7.22-7.29"
+          }
+        },
+        "nSwitch_IBUF_I_2_O": {
+          "hide_name": 0,
+          "bits": [ 9307 ] ,
+          "attributes": {
+            "ROUTING": "X0Y44/Q6;;1;X0Y44/E830;X0Y44/E830/Q6;1;X8Y44/E830;X8Y44/E830/E838;1;X16Y44/E800;X16Y44/E800/E838;1;X24Y44/N800;X24Y44/N800/E808;1;X24Y36/N100;X24Y36/N100/N808;1;X24Y35/E240;X24Y35/E240/N101;1;X26Y35/E250;X26Y35/E250/E242;1;X27Y35/A3;X27Y35/A3/E251;1",
+            "unused_bits": "0 ",
+            "src": "/usr/local/bin/../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "single_bit_vector": "00000000000000000000000000000001",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "nSwitch[3]": {
+          "hide_name": 0,
+          "bits": [ 9305 ] ,
+          "attributes": {
+            "ROUTING": " ",
+            "src": "switches.v:7.22-7.29"
+          }
+        },
+        "nSwitch_IBUF_I_4_O[4]": {
+          "hide_name": 0,
+          "bits": [ 9303 ] ,
+          "attributes": {
+            "ROUTING": "X51Y1/B5;X51Y1/B5/S252;1;X36Y0/W270;X36Y0/W270/W828;1;X35Y0/S270;X35Y0/S270/W271;1;X35Y1/B7;X35Y1/B7/S271;1;X44Y54/S830;X44Y54/S830/Q6;1;X44Y47/N800;X44Y47/N800/N838;1;X44Y39/N810;X44Y39/N810/N808;1;X44Y31/N820;X44Y31/N820/N818;1;X44Y23/N820;X44Y23/N820/N828;1;X44Y15/N820;X44Y15/N820/N828;1;X44Y7/N820;X44Y7/N820/N828;1;X44Y0/W820;X44Y0/W820/S828;1;X36Y0/W100;X36Y0/W100/W828;1;X35Y0/N240;X35Y0/N240/W101;1;X35Y1/X03;X35Y1/X03/S242;1;X35Y1/B3;X35Y1/B3/X03;1;X44Y54/Q6;;1;X44Y54/E830;X44Y54/E830/Q6;1;X52Y54/S830;X52Y54/S830/E838;1;X52Y47/N800;X52Y47/N800/N838;1;X52Y39/N810;X52Y39/N810/N808;1;X52Y31/N820;X52Y31/N820/N818;1;X52Y23/N820;X52Y23/N820/N828;1;X52Y15/N830;X52Y15/N830/N828;1;X52Y7/N830;X52Y7/N830/N838;1;X52Y0/W250;X52Y0/W250/S838;1;X51Y0/N250;X51Y0/N250/W251;1;X51Y1/B6;X51Y1/B6/S252;1",
+            "src": "/usr/local/bin/../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001",
+            "unused_bits": "0 "
+          }
+        },
+        "nSwitch[4]": {
+          "hide_name": 0,
+          "bits": [ 9301 ] ,
+          "attributes": {
+            "ROUTING": " ",
+            "src": "switches.v:7.22-7.29"
+          }
+        },
+        "nSwitch_IBUF_I_4_O[5]": {
+          "hide_name": 0,
+          "bits": [ 9299 ] ,
+          "attributes": {
+            "ROUTING": "X35Y1/A3;X35Y1/A3/E271;1;X51Y1/A6;X51Y1/A6/W272;1;X53Y15/N810;X53Y15/N810/N818;1;X53Y7/N810;X53Y7/N810/N818;1;X53Y0/S130;X53Y0/S130/S818;1;X53Y1/W270;X53Y1/W270/S131;1;X51Y1/A5;X51Y1/A5/W272;1;X53Y54/Q6;;1;X53Y54/S830;X53Y54/S830/Q6;1;X53Y47/N830;X53Y47/N830/N838;1;X53Y39/N800;X53Y39/N800/N838;1;X53Y31/N800;X53Y31/N800/N808;1;X53Y23/N810;X53Y23/N810/N808;1;X53Y15/E810;X53Y15/E810/N818;1;X50Y15/W810;X50Y15/W810/W818;1;X42Y15/W810;X42Y15/W810/W818;1;X34Y15/N810;X34Y15/N810/W818;1;X34Y7/N810;X34Y7/N810/N818;1;X34Y0/S130;X34Y0/S130/S818;1;X34Y1/E270;X34Y1/E270/S131;1;X35Y1/A7;X35Y1/A7/E271;1",
+            "src": "/usr/local/bin/../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001",
+            "unused_bits": "0 "
+          }
+        },
+        "nSwitch[5]": {
+          "hide_name": 0,
+          "bits": [ 9297 ] ,
+          "attributes": {
+            "ROUTING": " ",
+            "src": "switches.v:7.22-7.29"
+          }
+        },
+        "nLed[0]": {
+          "hide_name": 0,
+          "bits": [ 9295 ] ,
+          "attributes": {
+            "ROUTING": " ",
+            "src": "switches.v:6.23-6.27"
+          }
+        },
+        "nSwitch_IBUF_I_3_O_LUT1_I0_F[0]": {
+          "hide_name": 0,
+          "bits": [ 9294 ] ,
+          "attributes": {
+            "ROUTING": "X7Y37/F3;;1;X7Y37/E800;X7Y37/E800/F3;1;X15Y37/E810;X15Y37/E810/E808;1;X23Y37/E820;X23Y37/E820/E818;1;X31Y37/N820;X31Y37/N820/E828;1;X31Y29/E820;X31Y29/E820/N828;1;X39Y29/E830;X39Y29/E830/E828;1;X47Y29/E830;X47Y29/E830/E838;1;X55Y29/S260;X55Y29/S260/E838;1;X55Y31/X03;X55Y31/X03/S262;1;X55Y31/D1;X55Y31/D1/X03;1"
+          }
+        },
+        "nLed[1]": {
+          "hide_name": 0,
+          "bits": [ 9292 ] ,
+          "attributes": {
+            "ROUTING": " ",
+            "src": "switches.v:6.23-6.27"
+          }
+        },
+        "nSwitch_IBUF_I_3_O_LUT1_I0_F[1]": {
+          "hide_name": 0,
+          "bits": [ 9291 ] ,
+          "attributes": {
+            "ROUTING": "X27Y35/F3;;1;X27Y35/E800;X27Y35/E800/F3;1;X35Y35/N800;X35Y35/N800/E808;1;X35Y31/E800;X35Y31/E800/N804;1;X43Y31/E800;X43Y31/E800/E808;1;X51Y31/E800;X51Y31/E800/E808;1;X55Y31/N200;X55Y31/N200/E804;1;X55Y31/A0;X55Y31/A0/N200;1"
+          }
+        },
+        "nLed[2]": {
+          "hide_name": 0,
+          "bits": [ 9289 ] ,
+          "attributes": {
+            "ROUTING": " ",
+            "src": "switches.v:6.23-6.27"
+          }
+        },
+        "nSwitch_IBUF_I_3_O_LUT1_I0_F[2]": {
+          "hide_name": 0,
+          "bits": [ 9288 ] ,
+          "attributes": {
+            "ROUTING": "X51Y1/F6;;1;X51Y1/SN10;X51Y1/SN10/F6;1;X51Y0/A0;X51Y0/A0/N111;1"
+          }
+        },
+        "nLed[3]": {
+          "hide_name": 0,
+          "bits": [ 9286 ] ,
+          "attributes": {
+            "ROUTING": " ",
+            "src": "switches.v:6.23-6.27"
+          }
+        },
+        "nSwitch_IBUF_I_3_O_LUT1_I0_F[3]": {
+          "hide_name": 0,
+          "bits": [ 9285 ] ,
+          "attributes": {
+            "ROUTING": "X51Y1/F5;;1;X51Y1/N100;X51Y1/N100/F5;1;X51Y0/D1;X51Y0/D1/N101;1"
+          }
+        },
+        "nLed[4]": {
+          "hide_name": 0,
+          "bits": [ 9283 ] ,
+          "attributes": {
+            "ROUTING": " ",
+            "src": "switches.v:6.23-6.27"
+          }
+        },
+        "nSwitch_IBUF_I_3_O_LUT1_I0_F[4]": {
+          "hide_name": 0,
+          "bits": [ 9282 ] ,
+          "attributes": {
+            "ROUTING": "X35Y1/F7;;1;X35Y1/N100;X35Y1/N100/F7;1;X35Y0/W200;X35Y0/W200/N101;1;X33Y0/D1;X33Y0/D1/W202;1"
+          }
+        },
+        "nLed[5]": {
+          "hide_name": 0,
+          "bits": [ 9279 ] ,
+          "attributes": {
+            "ROUTING": " ",
+            "src": "switches.v:6.23-6.27"
+          }
+        },
+        "nSwitch_IBUF_I_3_O_LUT1_I0_F[5]": {
+          "hide_name": 0,
+          "bits": [ 9278 ] ,
+          "attributes": {
+            "ROUTING": "X35Y1/F3;;1;X35Y1/SN10;X35Y1/SN10/F3;1;X35Y0/W250;X35Y0/W250/N111;1;X33Y0/A0;X33Y0/A0/W252;1"
+          }
+        }
+      }
+    }
+  }
+}
