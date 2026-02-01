@@ -71,3 +71,8 @@ To make these changes persistent, you may want to put these lines in your
 The ext board comes with six orange LEDS located at the right side of the
 board. They are labeled "5" to "0" from top to bottom. The
 [example](ext_board/leds) displays a simple static pattern.
+
+## Clock
+
+A simple [example](ext_board/clock) that flashes the LEDs once per second, in
+an alternating pattern.
