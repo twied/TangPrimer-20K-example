@@ -82,3 +82,9 @@ an alternating pattern.
 This [example](ext_board/switches) demonstrates how to read the status of the
 5 switches located at the right side of the board. The LEDs display the result
 of some boolean functions.
+
+## Buttons
+
+This [example](ext_board/buttons) shows how to read the status of the 5 buttons
+located at the left side of the board. Pushing S0 will turn LED 0 on, pushing
+S1 will turn the LED off.
