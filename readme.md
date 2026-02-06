@@ -88,3 +88,8 @@ of some boolean functions.
 This [example](ext_board/buttons) shows how to read the status of the 5 buttons
 located at the left side of the board. Pushing S0 will turn LED 0 on, pushing
 S1 will turn the LED off.
+
+## RGB LED
+
+This [example](ext_board/rgb_led) shows how to drive the RGB LED on the top
+left of the board by turning it yellow at medium intensity.

@@ -1,0 +1,2 @@
+IO_LOC "rgb_OBUF_O" IOR38A;
+IO_LOC "clk_IBUF_I" IOT27A;
