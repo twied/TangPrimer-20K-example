@@ -93,3 +93,8 @@ S1 will turn the LED off.
 
 This [example](ext_board/rgb_led) shows how to drive the RGB LED on the top
 left of the board by turning it yellow at medium intensity.
+
+## Sound
+
+This [example](ext_board/sound) shows how to use the audio jack on the top
+right of the board by playing a short sound file in a loop.

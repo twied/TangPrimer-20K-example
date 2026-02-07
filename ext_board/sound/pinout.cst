@@ -1,0 +1,5 @@
+IO_LOC "\sound_data.clk_IBUF_O " IOT27A;
+IO_LOC "pt8211_ws_OBUF_O" IOT48B;
+IO_LOC "pt8211_enable_OBUF_O" IOT54B;
+IO_LOC "pt8211_din_OBUF_O" IOT54A;
+IO_LOC "pt8211_bck_OBUF_O" IOT48A;
